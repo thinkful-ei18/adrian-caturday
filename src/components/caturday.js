@@ -1,9 +1,6 @@
 import React from 'react';
-
+import Button from './button'
 export default class Caturday extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render () {
     return (
@@ -13,7 +10,7 @@ export default class Caturday extends React.Component {
         <p>Make every day special with these GIFs.</p>
       </header>
       <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif" alt="Random Cat GIF" /></a>
-      <button>See Another</button>
+      <Button title="See Another"/>
     </main>
     );
 
