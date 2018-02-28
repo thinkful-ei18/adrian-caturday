@@ -7,8 +7,8 @@ export default class Caturday extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      initialTagline: "This one's on the house. Check it out!",
-      initialImage: "http://thecatapi.com/api/images/get?&format=src&type=gif"
+      currentTagline: "This one's on the house. Check it out!",
+      currentImage: "http://thecatapi.com/api/images/get?&format=src&type=gif"
     }
   }
 
@@ -34,8 +34,7 @@ export default class Caturday extends React.Component {
     const links = [url, url2]
     const randomLink = links[Math.floor(Math.random() * 2)];
 
-      this.setState({initialTagline: "Are you not entertained?!"});
-      this.setState({initialImage: randomLink });
+      this.setState({currentTagline: "Are you not entertained?!", currentImage: randomLink});
   }
 
   render () {
@@ -43,7 +42,7 @@ export default class Caturday extends React.Component {
     return (
     <main className="caturday" role="main">
       <Header />
-      <CaturdayImage image={this.state.initialImage} tagline={this.state.initialTagline} />
+      <CaturdayImage image={this.state.currentImage} tagline={this.state.currentTagline} />
       <Button title="See Another" whenClicked={this.seeAnother}/>
     </main>
     );
