@@ -10,7 +10,7 @@ export default class Caturday extends React.Component {
     <main className="caturday" role="main">
       <Header />
       <CaturdayImage src="http://thecatapi.com/api/images/get?format=src&type=gif" alt="Random Cat GIF"/>
-      <Button title="See Another"/>
+      <Button title="See Another" whenClicked={() => {console.log('`See Another!` was clicked.')}}/>
     </main>
     );
 
