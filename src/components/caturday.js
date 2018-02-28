@@ -13,7 +13,7 @@ export default class Caturday extends React.Component {
   }
 
   seeAnother = () => {
-    // API KEY: Mjc3Mzgz
+
     const API_KEY = "Mjc3Mzgz";
 
     const categories = [
