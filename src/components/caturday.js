@@ -8,13 +8,33 @@ export default class Caturday extends React.Component {
     super(props);
     this.state = {
       initialTagline: "This one's on the house. Check it out!",
-      initialImage: ""
+      initialImage: "http://thecatapi.com/api/images/get?api_key=Mjc3Mzgz&format=src&type=gif"
     }
   }
 
-  setTagline = (props) => {
+  seeAnother = (props) => {
     // API KEY: Mjc3Mzgz
-    return this.setState({initialTagline: "Are you not entertained?!"});
+
+    const categories = [
+      "hats",
+      "ties",
+      "space",
+      "funny",
+      "boxes",
+      "caturday",
+      "kittens",
+      "sinks",
+      "clothes",
+    ]
+
+    let category =categories[Math.floor(Math.random() * 9)]
+
+    const url = `http://thecatapi.com/api/images/get?api_key=Mjc3Mzgz&format=src&type=gif&category=${category}`
+
+    return (
+      this.setState({initialTagline: "Are you not entertained?!"}),
+      this.setState({initialImage: url })
+    );
   }
 
   render () {
@@ -34,8 +54,8 @@ export default class Caturday extends React.Component {
     return (
     <main className="caturday" role="main">
       <Header />
-      <CaturdayImage tagline={this.state.initialTagline} category={categories[Math.floor(Math.random() * 9)]} />
-      <Button title="See Another" whenClicked={this.setTagline}/>
+      <CaturdayImage image={this.state.initialImage} tagline={this.state.initialTagline} category={categories[Math.floor(Math.random() * 9)]} />
+      <Button title="See Another" whenClicked={this.seeAnother}/>
     </main>
     );
 
