@@ -18,10 +18,23 @@ export default class Caturday extends React.Component {
   }
 
   render () {
+
+    const categories = [
+      "hats",
+      "ties",
+      "space",
+      "funny",
+      "boxes",
+      "caturday",
+      "kittens",
+      "sinks",
+      "clothes",
+    ]
+
     return (
     <main className="caturday" role="main">
       <Header />
-      <CaturdayImage tagline={this.state.initialTagline} key={[1,2,3,4,5][Math.floor(Math.random() * 5)]} />
+      <CaturdayImage tagline={this.state.initialTagline} category={categories[Math.floor(Math.random() * 9)]} />
       <Button title="See Another" whenClicked={this.setTagline}/>
     </main>
     );

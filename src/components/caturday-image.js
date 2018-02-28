@@ -8,13 +8,7 @@ export default function CaturdayImage(props) {
   }
 
   // const url = "http://thecatapi.com/api/images/get?api_key=Mjc3Mzgz&format=src&type=gif"
-  const url = [
-    "http://thecatapi.com/api/images/get?api_key=Mjc3Mzgz&format=src&type=gif",
-    "http://thecatapi.com/api/images/get?api_key=Mjc3Mzgz&format=src&type=gif&category=hats",
-    "http://thecatapi.com/api/images/get?api_key=Mjc3Mzgz&format=src&type=gif&category=ties",
-    "http://thecatapi.com/api/images/get?api_key=Mjc3Mzgz&format=src&type=gif&category=space",
-    "http://thecatapi.com/api/images/get?api_key=Mjc3Mzgz&format=src&type=gif&category=space",
-  ]
+  const url = `http://thecatapi.com/api/images/get?api_key=Mjc3Mzgz&format=src&type=gif&category=${props.category}`
 
   // key={[1,2,3,4,5][Math.floor(Math.random() * 5)]}
 
