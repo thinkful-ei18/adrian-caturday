@@ -1,5 +1,6 @@
 import React from 'react';
-import Button from './button'
+import Button from './button';
+import CaturdayImage from './caturday-image';
 export default class Caturday extends React.Component {
 
   render () {
