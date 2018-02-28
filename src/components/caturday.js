@@ -7,22 +7,21 @@ export default class Caturday extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      initialTagline: "This one's on the house. Check it out!"
+      initialTagline: "This one's on the house. Check it out!",
+      initialImage: ""
     }
   }
 
   setTagline = (props) => {
     // API KEY: Mjc3Mzgz
-    // Call set state to change tagline.
     return this.setState({initialTagline: "Are you not entertained?!"});
-    // return console.log('Beep boop!');
   }
 
   render () {
     return (
     <main className="caturday" role="main">
       <Header />
-      <CaturdayImage tagline={this.state.initialTagline}/>
+      <CaturdayImage tagline={this.state.initialTagline} key={[1,2,3,4,5][Math.floor(Math.random() * 5)]} />
       <Button title="See Another" whenClicked={this.setTagline}/>
     </main>
     );
