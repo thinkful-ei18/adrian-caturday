@@ -12,7 +12,7 @@ export default class Caturday extends React.Component {
     }
   }
 
-  seeAnother = (props) => {
+  seeAnother = () => {
     // API KEY: Mjc3Mzgz
     const API_KEY = "Mjc3Mzgz";
 
@@ -34,10 +34,8 @@ export default class Caturday extends React.Component {
     const links = [url, url2]
     const randomLink = links[Math.floor(Math.random() * 2)];
 
-    return (
-      this.setState({initialTagline: "Are you not entertained?!"}),
-      this.setState({initialImage: randomLink })
-    );
+      this.setState({initialTagline: "Are you not entertained?!"});
+      this.setState({initialImage: randomLink });
   }
 
   render () {
