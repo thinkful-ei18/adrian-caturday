@@ -7,13 +7,13 @@ export default class Caturday extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentTagline: "This one's on the house. Check it out!"
+      initialTagline: "This one's on the house. Check it out!"
     }
   }
 
   setTagline = (props) => {
     // Call set state to change tagline.
-    return this.setState({currentTagline: "Are you not entertained?!"});
+    return this.setState({initialTagline: "Are you not entertained?!"});
     // return console.log('Beep boop!');
   }
 
@@ -21,7 +21,7 @@ export default class Caturday extends React.Component {
     return (
     <main className="caturday" role="main">
       <Header />
-      <CaturdayImage tagline={this.state.currentTagline}/>
+      <CaturdayImage tagline={this.state.initialTagline}/>
       <Button title="See Another" whenClicked={this.setTagline}/>
     </main>
     );
