@@ -8,9 +8,8 @@ export default class Caturday extends React.Component {
     <main className="caturday" role="main">
       <header>
         <h1>It's Caturday!</h1>
-        <p>Make every day special with these GIFs.</p>
+        <p>Make every day special with these GIFs from the <a href="http://thecatapi.com">Cat API.</a></p>
       </header>
-      {/* <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif" alt="Random Cat GIF" /></a> */}
       <CaturdayImage href="http://thecatapi.com" src="http://thecatapi.com/api/images/get?format=src&type=gif" alt="Random Cat GIF"/>
       <Button title="See Another"/>
     </main>
