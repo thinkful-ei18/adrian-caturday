@@ -7,7 +7,7 @@ export default class Caturday extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      CurrentTagline: ''
     }
   }
 
