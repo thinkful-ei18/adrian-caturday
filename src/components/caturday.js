@@ -1,6 +1,10 @@
 import React from 'react';
 
 export default class Caturday extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render () {
     return (
     <main className="caturday" role="main">
