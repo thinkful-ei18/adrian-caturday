@@ -4,17 +4,24 @@ import CaturdayImage from './caturday-image';
 import Button from './button';
 
 export default class Caturday extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
 
-  nextImage = () => {
-    console.log('`See Another!` was clicked.');
+    }
+  }
+
+  setTagline = (props) => {
+    // Call set state to change tagline.
+    return console.log('Beep boop.');
   }
 
   render () {
     return (
     <main className="caturday" role="main">
       <Header />
-      <CaturdayImage tagline="This one's on the house. Check it out!" src="http://thecatapi.com/api/images/get?format=src&type=gif" alt="Random Cat GIF"/>
-      <Button title="See Another" whenClicked={this.nextImage}/>
+      <CaturdayImage tagline="This one's on the house. Check it out!"/>
+      <Button title="See Another" whenClicked={this.setTagline}/>
     </main>
     );
 
