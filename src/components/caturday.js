@@ -9,7 +9,7 @@ export default class Caturday extends React.Component {
     return (
     <main className="caturday" role="main">
       <Header />
-      <CaturdayImage href="http://thecatapi.com" src="http://thecatapi.com/api/images/get?format=src&type=gif" alt="Random Cat GIF"/>
+      <CaturdayImage src="http://thecatapi.com/api/images/get?format=src&type=gif" alt="Random Cat GIF"/>
       <Button title="See Another"/>
     </main>
     );
