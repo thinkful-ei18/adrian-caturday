@@ -12,6 +12,7 @@ export default class Caturday extends React.Component {
   }
 
   setTagline = (props) => {
+    // API KEY: Mjc3Mzgz
     // Call set state to change tagline.
     return this.setState({initialTagline: "Are you not entertained?!"});
     // return console.log('Beep boop!');
