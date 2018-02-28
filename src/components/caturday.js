@@ -13,7 +13,8 @@ export default class Caturday extends React.Component {
 
   setTagline = (props) => {
     // Call set state to change tagline.
-    return console.log('Beep boop!');
+    return this.setState({currentTagline: "Are you not entertained?!"});
+    // return console.log('Beep boop!');
   }
 
   render () {
